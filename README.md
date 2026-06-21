@@ -21,7 +21,7 @@
   </a>
 </p>
 
-## 📊 GitHub 贡献统计（已修复用户名参数）
+## 📊 GitHub 贡献统计
 
 <p align="left">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=YANGHAHA&theme=apple-light&hide_border=true&area=true&height=300" alt="GitHub 年度贡献热力图" width="100%" />
