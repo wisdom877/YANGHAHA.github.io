@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YANGHAHAMONEY - 个人简历</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 自定义配置：匹配苹果字体和主色调 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            gray: '#f5f5f7',
+                            dark: '#1d1d1f',
+                            blue: '#0066cc'
+                        }
+                    },
+                    fontFamily: {
+                        sanfrancisco: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            /* 苹果风格滚动条 */
+            .scrollbar-apple {
+                scrollbar-width: thin;
+                scrollbar-color: #8e8e93 #f5f5f7;
+            }
+            .scrollbar-apple::-webkit-scrollbar {
+                width: 6px;
+            }
+            .scrollbar-apple::-webkit-scrollbar-track {
+                background: #f5f5f7;
+            }
+            .scrollbar-apple::-webkit-scrollbar-thumb {
+                background-color: #8e8e93;
+                border-radius: 3px;
+            }
+            /* 导航栏滚动效果 */
+            .nav-scrolled {
+                background-color: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(8px);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body class="font-sanfrancisco bg-apple-gray text-apple-dark scrollbar-apple antialiased">
+    <!-- 苹果风格导航栏 -->
+    <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-3 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- 左侧Logo -->
+            <a href="#" class="text-2xl font-medium text-apple-dark hover:text-apple-blue transition-colors">YANGHAHAMONEY</a>
+            
+            <!-- 右侧导航菜单（桌面端） -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-sm hover:text-apple-blue transition-colors">首页</a>
+                <a href="#about" class="text-sm hover:text-apple-blue transition-colors">关于我</a>
+                <a href="#skills" class="text-sm hover:text-apple-blue transition-colors">技能经验</a>
+                <a href="#projects" class="text-sm hover:text-apple-blue transition-colors">项目作品</a>
+                <a href="#blog" class="text-sm hover:text-apple-blue transition-colors">我的博客</a>
+                <a href="#contact" class="text-sm hover:text-apple-blue transition-colors">联系我</a>
+            </div>
+            
+            <!-- 移动端菜单按钮 -->
+            <button id="menu-btn" class="md:hidden text-apple-dark focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- 移动端下拉菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-2xl shadow-lg py-4 px-6">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-sm hover:text-apple-blue transition-colors">首页</a>
+                <a href="#about" class="text-sm hover:text-apple-blue transition-colors">关于我</a>
+                <a href="#skills" class="text-sm hover:text-apple-blue transition-colors">技能经验</a>
+                <a href="#projects" class="text-sm hover:text-apple-blue transition-colors">项目作品</a>
+                <a href="#blog" class="text-sm hover:text-apple-blue transition-colors">我的博客</a>
+                <a href="#contact" class="text-sm hover:text-apple-blue transition-colors">联系我</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区（简历首页） -->
+    <section id="home" class="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-8 bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-light mb-6">YANGHAHAMONEY</h1>
+            <p class="text-xl md:text-2xl text-gray-600 font-light mb-10 max-w-3xl mx-auto">
+                专注测试与开发 · 技术驱动效率 · 以专业能力赋能产品质量提升
+            </p>
+            <a href="#about" class="inline-block bg-apple-blue text-white py-3 px-8 rounded-lg text-sm font-medium hover:bg-[#0071e3] transition-colors">
+                了解更多
+            </a>
+        </div>
+        <!-- 苹果风格配图 -->
+        <div class="mt-12 md:mt-16 max-w-5xl mx-auto">
+            <img src="https://picsum.photos/id/10/1200/600" alt="技术场景配图" class="w-full h-auto rounded-xl shadow-xl">
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="py-20 px-4 md:px-8 bg-apple-gray">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-light text-center mb-16">关于我</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl md:text-3xl font-light mb-6">测试与开发领域的实践者</h3>
+                    <p class="text-gray-600 font-light mb-4 text-lg">
+                        河南工业大学数据科学与大数据技术专业本科在读，具备服务器知名厂商测试工程师实习经历，深耕服务器测试、自动化测试与系统开发领域。
+                    </p>
+                    <p class="text-gray-600 font-light mb-6 text-lg">
+                        拥有丰富的硬件调试、全链路故障排查经验，熟练掌握Python、Shell脚本开发，擅长自动化测试体系搭建与系统运维优化，兼具团队协作与项目管理能力，致力于用技术提升测试效率与产品质量。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm shadow-sm">测试开发</span>
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm shadow-sm">自动化测试</span>
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm shadow-sm">Linux运维</span>
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm shadow-sm">团队协作</span>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="https://picsum.photos/id/18/800/800" alt="个人职业形象配图" class="w-full h-auto rounded-xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能经验 -->
+    <section id="skills" class="py-20 px-4 md:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-light text-center mb-16">技能与经验</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- 技术技能卡片 -->
+                <div class="bg-apple-gray rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-apple-blue mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium text-center mb-4">核心技术技能</h3>
+                    <ul class="text-gray-600 space-y-3 font-light">
+                        <li class="flex items-center justify-center">Python编程、Shell脚本开发</li>
+                        <li class="flex items-center justify-center">自动化测试框架设计与实现</li>
+                        <li class="flex items-center justify-center">Linux系统运维、服务器部署</li>
+                        <li class="flex items-center justify-center">测试用例设计、故障定位与分析</li>
+                    </ul>
+                </div>
+                
+                <!-- 实习/项目经验卡片 -->
+                <div class="bg-apple-gray rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-apple-blue mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium text-center mb-4">实习/项目经验</h3>
+                    <ul class="text-gray-600 space-y-3 font-light">
+                        <li class="flex items-center justify-center">服务器知名厂商服务器测试实习（半年+）</li>
+                        <li class="flex items-center justify-center">独立开发Wisdom's Blog博客系统</li>
+                        <li class="flex items-center justify-center">自动化测试效率提升约30%</li>
+                        <li class="flex items-center justify-center">跨团队协作完成服务器版本交付</li>
+                    </ul>
+                </div>
+                
+                <!-- 软技能卡片 -->
+                <div class="bg-apple-gray rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-apple-blue mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium text-center mb-4">综合能力</h3>
+                    <ul class="text-gray-600 space-y-3 font-light">
+                        <li class="flex items-center justify-center">高效沟通与跨团队协作</li>
+                        <li class="flex items-center justify-center">问题根因分析与解决方案落地</li>
+                        <li class="flex items-center justify-center">技术文档编写与知识沉淀</li>
+                        <li class="flex items-center justify-center">系统思维与流程优化能力</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 配图分隔 -->
+            <div class="max-w-5xl mx-auto">
+                <img src="https://picsum.photos/id/29/1200/400" alt="服务器测试场景配图" class="w-full h-auto rounded-xl shadow-xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目作品 -->
+    <section id="projects" class="py-20 px-4 md:px-8 bg-apple-gray">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-light text-center mb-16">项目作品</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+                <div>
+                    <img src="https://picsum.photos/id/42/800/600" alt="Wisdom's Blog博客系统截图" class="w-full h-auto rounded-xl shadow-lg">
+                </div>
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-light mb-4">Wisdom's Blog 博客系统</h3>
+                    <p class="text-gray-600 font-light mb-6 text-lg">
+                        独立开发集博客展示与后台管理于一体的系统，实现内容管理、用户管理、数据可视化、权限控制、智能推荐等核心功能，已获批软件著作权。基于Python搭建自动化测试体系，测试效率提升30%，系统响应速度提升20%。
+                    </p>
+                    <p class="text-gray-600 font-light mb-6 text-lg">
+                        完成阿里云服务器全流程部署，包含备案、域名绑定、SSL配置、负载均衡等，建立标准化部署流程与监控报警机制，保障系统高可用运行。
+                    </p>
+                    <a href="https://wisdomhqq.top" target="_blank" class="inline-block text-apple-blue hover:underline transition-all mr-6">
+                        访问博客 →
+                    </a>
+                    <a href="#" class="inline-block text-gray-600 hover:text-apple-blue transition-all">
+                        查看项目详情 →
+                    </a>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="md:order-2">
+                    <h3 class="text-2xl md:text-3xl font-light mb-4">服务器知名厂商服务器测试项目</h3>
+                    <p class="text-gray-600 font-light mb-6 text-lg">
+                        参与百余台服务器硬件调试、全链路故障排查与系统集成测试，编写自动化测试脚本并优化测试流程，累计优化脚本和测试用例超百个，测试效率提升约30%，保障多款服务器产品顺利量产。
+                    </p>
+                    <p class="text-gray-600 font-light mb-6 text-lg">
+                        负责测试环境部署与运维配置，推动部署流程标准化，解决多项接口异常与性能瓶颈问题，提升系统稳定性与研发协作效率。
+                    </p>
+                    <a href="#" class="inline-block text-apple-blue hover:underline transition-all mr-6">
+                        查看实习总结 →
+                    </a>
+                    <a href="#" class="inline-block text-gray-600 hover:text-apple-blue transition-all">
+                        技术文档下载 →
+                    </a>
+                </div>
+                <div class="md:order-1">
+                    <img src="https://picsum.photos/id/65/800/600" alt="服务器测试项目截图" class="w-full h-auto rounded-xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 我的博客 -->
+    <section id="blog" class="py-20 px-4 md:px-8 bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-light mb-6">我的博客</h2>
+            <p class="text-gray-600 font-light mb-10 text-lg max-w-3xl mx-auto">
+                记录测试开发技术心得、项目实战总结与学习成长轨迹，分享可落地的技术方案与实践经验
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <a href="https://wisdomhqq.top" target="_blank" class="block bg-apple-gray rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-medium mb-4">个人独立博客</h3>
+                    <p class="text-gray-600 font-light mb-6">
+                        专注测试开发、自动化测试、Linux运维等技术分享，沉淀项目实战经验与解决方案
+                    </p>
+                    <span class="inline-block text-apple-blue hover:underline text-sm">访问 wisdomhqq.top →</span>
+                </a>
+                <a href="https://blog.csdn.net/weixin_73568667?type=blog" target="_blank" class="block bg-apple-gray rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-medium mb-4">CSDN博客</h3>
+                    <p class="text-gray-600 font-light mb-6">
+                        记录学习过程中的技术难点、解决方案，与开发者社区交流互动，分享测试开发实践
+                    </p>
+                    <span class="inline-block text-apple-blue hover:underline text-sm">访问 CSDN专栏 →</span>
+                </a>
+            </div>
+            <!-- 配图点缀 -->
+            <div class="mt-16 max-w-5xl mx-auto">
+                <img src="https://picsum.photos/id/110/1200/400" alt="技术分享场景配图" class="w-full h-auto rounded-xl shadow-xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+<section id="contact" class="py-20 px-4 md:px-8 bg-apple-gray">
+    <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-light mb-6">联系我</h2>
+        <p class="text-gray-600 font-light mb-10 text-lg">
+            欢迎通过以下方式与我联系，探讨技术、交流心得或寻求合作
+        </p>
+        <div class="flex flex-wrap justify-center gap-6 mb-10">
+            <a href="https://wisdomhqq.top" target="_blank" class="bg-white text-apple-dark py-4 px-8 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors">
+                个人博客
+            </a>
+            <a href="https://blog.csdn.net/weixin_73568667?type=blog" target="_blank" class="bg-white text-apple-dark py-4 px-8 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors">
+                CSDN专栏
+            </a>
+
+            <a href="mailto:yangqiqi626@gmail.com" class="bg-apple-dark text-white py-4 px-8 rounded-lg text-sm font-medium hover:bg-black transition-colors">
+                发送邮件
+            </a>
+        </div>
+    </div>
+</section>
+
+    <footer class="py-12 px-4 md:px-8 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-sm font-medium mb-4">导航</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#home" class="hover:text-apple-blue transition-colors">首页</a></li>
+                        <li><a href="#about" class="hover:text-apple-blue transition-colors">关于我</a></li>
+                        <li><a href="#skills" class="hover:text-apple-blue transition-colors">技能经验</a></li>
+                        <li><a href="#projects" class="hover:text-apple-blue transition-colors">项目作品</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-medium mb-4">博客链接</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="https://wisdomhqq.top" target="_blank" class="hover:text-apple-blue transition-colors">个人博客</a></li>
+                        <li><a href="https://blog.csdn.net/weixin_73568667?type=blog" target="_blank" class="hover:text-apple-blue transition-colors">CSDN专栏</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-medium mb-4">关注我</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="https://github.com/YANGHAHAMONEY" class="hover:text-apple-blue transition-colors">GitHub</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-medium mb-4">法律</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-apple-blue transition-colors">隐私政策</a></li>
+                        <li><a href="#" class="hover:text-apple-blue transition-colors">使用条款</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-200 text-center text-sm text-gray-500">
+                <p>© 2026 YANGHAHAMONEY. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 交互逻辑JS -->
+    <script>
+        // 导航栏滚动效果
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+
+        // 移动端菜单切换
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑锚点跳转
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // 预留导航栏高度
+                        behavior: 'smooth'
+                    });
+                    // 关闭移动端菜单
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
