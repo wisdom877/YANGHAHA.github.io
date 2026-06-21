@@ -2,7 +2,7 @@
 
 🌈 前端&测试开发爱好者
 
-🏡 个人简历官网：[[https://wisdom877.github.io/YANGHAHA.github.io/](https://wisdom877.github.io/YANGHAHA.github.io/)]([https://wisdom877.github.io/YANGHAHA.github.io/](https://wisdom877.github.io/YANGHAHA.github.io/))
+🏡 个人简历官网：https://wisdom877.github.io/YANGHAHA.github.io/
 
 📝 独立技术博客：[https://wisdomhqq.top](https://wisdomhqq.top)
 
