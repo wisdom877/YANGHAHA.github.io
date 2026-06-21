@@ -2,8 +2,11 @@
 
 🌈 前端&测试开发爱好者
 🏡 个人简历官网：[https://YANGHAHA877.github.io](https://YANGHAHA877.github.io)
+
 📝 独立技术博客：[https://wisdomhqq.top](https://wisdomhqq.top)
+
 💻 CSDN 技术专栏：[https://blog.csdn.net/weixin_73568667?type=blog](https://blog.csdn.net/weixin_73568667?type=blog)
+
 ✉️ 联系邮箱：`yangqiqi626@gmail.com`
 
 🌱 深耕测试开发、自动化测试与前端落地实践，专注页面设计、流畅交互体验开发；
