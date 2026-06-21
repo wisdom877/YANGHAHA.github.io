@@ -2,7 +2,7 @@
 
 🌈 技术爱好者，追求极简且优雅的代码与设计
 
-🏡 个人简历网站：[https://yanghahamoney.github.io](https://yanghahamoney.github.io)
+🏡 个人简历网站：[https://YANGHAHA.github.io](https://YANGHAHA.github.io)
 
 📝 个人博客：[https://wisdomhqq.top](https://wisdomhqq.top)
 
